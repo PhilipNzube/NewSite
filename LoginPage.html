@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            LoginPage
+        </title>
+        <style>
+          body{
+            background: url("./images/onyeka webpage landscape.png") 0 0 no-repeat;
+            } 
+
+form{
+    position: absolute;
+    left:550px;
+    top:200px;
+}
+
+::placeholder{
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+            label{
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+            }
+
+#EmailId{
+    border-radius: 10px;
+    height: 30px;
+width:250px;
+}
+
+#PasswordId{
+border-radius: 10px;
+height: 30px;
+width:250px;
+}
+
+#SubmitId{
+    background-color: crimson;
+    box-shadow:rgba(0, 0, 0, 0.315) 2px 2px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    height: 30px;
+width:150px;
+position:relative;
+left:50px;
+top:20px;
+font-family: 'Courier New', Courier, monospace;
+                font-weight: lighter;
+                font-size: large;
+}
+
+
+#SubmitId:hover{
+    width:160px;  
+    height: 40px; 
+}
+
+#SubmitId:focus{
+    box-shadow:rgba(0, 0, 0, 0.315) 0px 0px;
+}
+ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgb(241, 232, 236);
+            }
+                li{
+                float:right;
+            }
+            li a{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: large;
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 20px 30px;
+                text-decoration: none;
+            }
+            li a{
+                background-color: rgb(241, 232, 236);
+            }
+            .active{
+                border-radius: 10px;
+                background-color: rgba(220, 20, 60, 0.856);
+                font-weight: bold;
+                color:rgb(241, 232, 236);
+            }
+            
+            label{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: large;
+                font-weight: bold;
+                color: rgb(34, 32, 32);
+            }
+            
+        </style>
+        <ul>
+            <li><a href="LoginPage.html" class="active">Login</a></li>
+            <li><a href="RegistrationPage.html">Register</a></li>
+            <li><a href="ContactPage.html">Contact Me</a></li>
+            <li><a href="index.html">About Me</a></li>
+           </ul>
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <main>
+<form method="post" action="./action.php">
+    <label>EMAIL:</label><br/>
+    <input id="EmailId" type="email" placeholder="Input your mail here" required/><br/>
+    <label>PASSWORD:</label><br/>
+    <input id="PasswordId" type="password" placeholder="Input your password here" required/><br/>
+    <input id="SubmitId" value="Sign In" type="submit"/>
+</form>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            RegistrationPage
+        </title>
+        <style>
+          body{
+            background: url("./images/onyeka webpage landscape.png") 0 0 no-repeat;
+            } 
+
+form{            
+    position: absolute;
+    left:550px;
+    top:95px;
+}
+
+::placeholder{
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+            label{
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+            }
+
+            option{
+                font-family:sans-serif;
+                font-weight: bold;  
+            }
+
+#FirstNameId{
+border-radius: 10px;
+height: 30px;
+width:250px;
+}
+
+#LastNameId{
+border-radius: 10px;
+height: 30px;
+width:250px;
+}
+
+#PhoneId{
+border-radius: 10px;
+height: 30px;
+width:250px;
+}
+
+#GenderId{
+    font-family:sans-serif;
+                font-weight: bold; 
+border-radius: 10px;
+height: 30px;
+width:250px;
+}
+
+#CountryId{
+border-radius: 10px;
+height: 30px;
+width:250px;
+}
+
+#StateId{
+border-radius: 10px;
+height: 30px;
+width:250px;
+}
+
+#EmailId{
+    border-radius: 10px;
+    height: 30px;
+width:250px;
+}
+
+#PasswordId{
+border-radius: 10px;
+height: 30px;
+width:250px;
+}
+
+#Password2Id{
+border-radius: 10px;
+height: 30px;
+width:250px;
+}
+
+#SubmitId{
+    background-color: crimson;
+    box-shadow:rgba(0, 0, 0, 0.315) 2px 2px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    height: 30px;
+width:150px;
+position:relative;
+left:50px;
+top:20px;
+font-family: 'Courier New', Courier, monospace;
+                font-weight: lighter;
+                font-size: large;
+}
+
+#SubmitId:hover{
+    width:160px;  
+    height: 40px; 
+}
+
+#SubmitId:focus{
+    box-shadow:rgba(0, 0, 0, 0.315) 0px 0px;   
+}
+         ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgb(241, 232, 236);
+            }
+                li{
+                float:right;
+            }
+            li a{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: large;
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 20px 30px;
+                text-decoration: none;
+            }
+            li a{
+                background-color: rgb(241, 232, 236);;
+            }
+            .active{
+                border-radius: 10px;
+                background-color: rgba(220, 20, 60, 0.856);
+                font-weight: bold;
+                color:rgb(241, 232, 236);
+            }
+
+            label{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: large;
+                font-weight: bold;
+                color: rgb(34, 32, 32);
+            }
+            
+        </style>
+       <ul>
+        <li><a href="LoginPage.html">Login</a></li>
+        <li><a href="RegistrationPage.html" class="active">Register</a></li>
+        <li><a href="ContactPage.html">Contact Me</a></li>
+        <li><a href="index.html">About Me</a></li>
+       </ul>
+    </head>
+    <body>
+        <header>
+       
+        </header>
+        <main>
+<form method="post" action="./action.php">
+    <label>FIRST NAME:</label><br/>
+    <input id="FirstNameId" type="text" placeholder="Input your first name here" required/><br/>
+    <label>LAST NAME:</label><br/>
+    <input id="LastNameId" type="text" placeholder="Input your last name here" required/><br/>
+    <label>PHONE NO:</label><br/>
+    <input id="PhoneId" type="number" placeholder="Input your phone number here" required/><br/>
+    <label>GENDER:</label><br/>
+    <select id="GenderId">
+        <option></option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+        </select><br/>
+    <label>COUNTRY:</label><br/>
+    <input id="CountryId" type="text" placeholder="Input your country here" required/><br/>
+    <label>STATE/PROVINCE:</label><br/>
+    <input id="StateId" type="text" placeholder="Input your state/province here" required/><br/>
+    <label>EMAIL:</label><br/>
+    <input id="EmailId" type="email" placeholder="Input your mail here" required/><br/>
+    <label>PASSWORD:</label><br/>
+    <input id="PasswordId" type="password" title="Password must contain: Minimum 8 characters atleast 1 Alphabet and 1 Number" placeholder="Enter Password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required/><br/>
+    <label>CONFIRM PASSWORD:</label><br/>
+    <input id="Password2Id" type="password" placeholder="Confirm your password here" required/><br/>
+    <input id="SubmitId" type="submit"/>
+        </form>
+</main>
+        <footer>
+        </footer>
+    </body>
+</html>
