@@ -1,124 +1,283 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>
-            LoginPage
-        </title>
-        <style>
-          body{
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000" />
+    <link rel="Icon" type="img/png" href="./images/Icon.png" />
+    <title>
+        LoginPage
+    </title>
+    <style>
+        #NotActive:hover {
+            color: crimson
+        }
+
+        @media only screen and (min-width:780px) {
+
+        body {
             background: url("./images/onyeka webpage landscape.png") 0 0 no-repeat;
-            } 
+        }
 
-form{
-    position: absolute;
-    left:550px;
-    top:200px;
-}
+        #TopBar {
+            z-index: 1;
+            border-radius: 5px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background: url("./images/onyeka webpage landscape.png") 170px 0 repeat-x;
+        }
 
-::placeholder{
-    font-family: 'Courier New', Courier, monospace; 
-}
+        form {
+            position: relative;
+            /* left: 550px; */
+            top: 200px;
+        }
 
-            label{
-                font-family: 'Courier New', Courier, monospace;
-                font-weight: bold;
+        ::placeholder {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        label {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+
+        #EmailId {
+            border-radius: 10px;
+            height: 30px;
+            width: 250px;
+        }
+
+        #PasswordId {
+            border-radius: 10px;
+            height: 30px;
+            width: 250px;
+        }
+
+        #SubmitId {
+            background-color: crimson;
+            box-shadow: rgba(0, 0, 0, 0.315) 2px 2px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            height: 30px;
+            width: 150px;
+            position: relative;
+            /* left: 50px; */
+            top: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: lighter;
+            font-size: large;
+        }
+
+
+        #SubmitId:hover {
+            width: 160px;
+            height: 40px;
+        }
+
+        #SubmitId:focus {
+            box-shadow: rgba(0, 0, 0, 0.315) 0px 0px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(241, 232, 236);
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: large;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 20px 30px;
+            text-decoration: none;
+        }
+
+        li a {
+            background-color: rgb(241, 232, 236);
+        }
+
+        .active {
+            border-radius: 10px;
+            background-color: rgba(220, 20, 60, 0.856);
+            font-weight: bold;
+            color: rgb(241, 232, 236);
+        }
+
+        label {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: large;
+            font-weight: bold;
+            color: rgb(34, 32, 32);
+        }
+    }
+
+
+
+    @media only screen and (max-width:779px) {
+            body {
+                background: url("./images/onyeka webpage landscape.png") 0 0 no-repeat;
+                overflow-x: hidden;
+                width: 90%;
             }
 
-#EmailId{
-    border-radius: 10px;
-    height: 30px;
-width:250px;
-}
+            #TopBar {
+                z-index: 1;
+                width: fit-content;
+                border-radius: 5px;
+                position: fixed;
+                top: 0;
+                background: url("./images/onyeka webpage landscape.png") 170px 0 repeat-x;
+            }
 
-#PasswordId{
-border-radius: 10px;
-height: 30px;
-width:250px;
-}
+            form {
+                position: relative;
+                /* left: 25%; */
+                top: 200px;
+            }
 
-#SubmitId{
-    background-color: crimson;
-    box-shadow:rgba(0, 0, 0, 0.315) 2px 2px;
-    border: 1px solid grey;
-    border-radius: 10px;
-    height: 30px;
-width:150px;
-position:relative;
-left:50px;
-top:20px;
-font-family: 'Courier New', Courier, monospace;
-                font-weight: lighter;
-                font-size: large;
-}
+            ::placeholder {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        label {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+
+        #EmailId {
+            border-radius: 10px;
+            height: 30px;
+            width: 250px;
+        }
+
+        #PasswordId {
+            border-radius: 10px;
+            height: 30px;
+            width: 250px;
+        }
+
+        #SubmitId {
+            background-color: crimson;
+            box-shadow: rgba(0, 0, 0, 0.315) 2px 2px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            height: 30px;
+            width: 150px;
+            position: relative;
+            /* left: 50px; */
+            top: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: lighter;
+            font-size: large;
+        }
 
 
-#SubmitId:hover{
-    width:160px;  
-    height: 40px; 
-}
+        #SubmitId:hover {
+            width: 160px;
+            height: 40px;
+        }
 
-#SubmitId:focus{
-    box-shadow:rgba(0, 0, 0, 0.315) 0px 0px;
-}
-ul{
+        #SubmitId:focus {
+            box-shadow: rgba(0, 0, 0, 0.315) 0px 0px;
+        }
+
+
+
+            ul {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
                 background-color: rgb(241, 232, 236);
+                background: url("./images/onyeka webpage landscape.png") 170px 0 repeat-x;
+                width: 100%;
             }
-                li{
-                float:right;
+
+            li {
+                float: right;
             }
-            li a{
+
+            li a {
                 font-family: 'Courier New', Courier, monospace;
                 font-size: large;
                 display: block;
                 color: black;
                 text-align: center;
-                padding: 20px 30px;
+                padding: 20px 10px;
                 text-decoration: none;
+                position: relative;
+                right: 10px;
             }
-            li a{
+
+            li a {
                 background-color: rgb(241, 232, 236);
             }
-            .active{
+
+            .active {
                 border-radius: 10px;
                 background-color: rgba(220, 20, 60, 0.856);
                 font-weight: bold;
-                color:rgb(241, 232, 236);
+                color: rgb(241, 232, 236);
             }
-            
-            label{
-                font-family: 'Courier New', Courier, monospace;
-                font-size: large;
-                font-weight: bold;
-                color: rgb(34, 32, 32);
+        }
+
+
+
+
+
+        @media only screen and (max-width:500px) {
+            #TopBar {
+                transition-property: all;
+                transition-duration: 1s;
+                top: -30%;
+                width: 100%;
             }
-            
-        </style>
-        <ul>
-            <li><a href="LoginPage.html" class="active">Login</a></li>
-            <li><a href="RegistrationPage.html">Register</a></li>
-            <li><a href="ContactPage.html">Contact Me</a></li>
-            <li><a href="index.html">About Me</a></li>
-           </ul>
-    </head>
-    <body>
-        <header>
-            
-        </header>
-        <main>
-<form method="post" action="./action.php">
-    <label>EMAIL:</label><br/>
-    <input id="EmailId" type="email" placeholder="Input your mail here" required/><br/>
-    <label>PASSWORD:</label><br/>
-    <input id="PasswordId" type="password" placeholder="Input your password here" required/><br/>
-    <input id="SubmitId" value="Sign In" type="submit"/>
-</form>
-        </main>
-        <footer>
-        </footer>
-    </body>
+
+            #TopBar:hover {
+                transition-property: all;
+                transition-duration: 1s;
+                top: 0%;
+            }
+
+            li {
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul id="TopBar">
+            <li><a id="NotActive" href="RegistrationPage.html">Register</a></li>
+            <li><a id="NotActive" href="ContactPage.html">Contact Me</a></li>
+            <li><a id="NotActive" href="index.html">About Me</a></li>
+            <li><a class="active">Login</a></li>
+        </ul>
+    </header>
+    <main>
+        <center>
+        <form method="post" action="./action.php">
+            <label>EMAIL:</label><br />
+            <input id="EmailId" type="email" placeholder="Input your mail here" required /><br />
+            <label>PASSWORD:</label><br />
+            <input id="PasswordId" type="password" placeholder="Input your password here" required /><br />
+            <input id="SubmitId" value="Sign In" type="submit" />
+        </form>
+        </center>
+    </main>
+    <footer>
+    </footer>
+</body>
+
 </html>

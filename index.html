@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-            HomePage
-        </title>
-        <style>
-            @media only screen and (min-width:800px) {
-            body{
-                /*
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="Icon" type="img/png" href="./images/Icon.png" />
+    <title>
+        HomePage
+    </title>
+    <style>
+        #NotActive:hover {
+            color: crimson
+        }
+
+        @media only screen and (min-width:780px) {
+            body {
+
                 background-color: rgb(241, 232, 236);
-                */
+
                 background: url("./images/onyeka webpage landscape.png") 0 0 no-repeat;
-                background-attachment: fixed;
-                background-size: cover;
+                /* background-attachment: fixed; */
+                background-size: 100%;
                 overflow-x: hidden;
+                overflow-y: hidden;
+                margin-left: 200px;
             }
-            
-           #TopBar{
-            background: url("./images/onyeka webpage landscape.png") 170px 0 repeat-x;
-           }  
-            
+
+            #TopBar {
+                position: fixed;
+                top: 0;
+                right: 0;
+                background: url("./images/onyeka webpage landscape.png") 170px 0 repeat-x;
+            }
 
 
-            ul{
+
+            ul {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
                 background-color: rgb(241, 232, 236);
-                
+
             }
-                li{
-                float:right;
+
+            li {
+                float: right;
             }
-            li a{
+
+            li a {
                 font-family: 'Courier New', Courier, monospace;
                 font-size: large;
                 display: block;
@@ -43,158 +57,236 @@
                 padding: 20px 30px;
                 text-decoration: none;
             }
-            li a{
+
+            li a {
                 background-color: rgb(241, 232, 236);
             }
-            .active{
+
+            .active {
                 border-radius: 10px;
                 background-color: rgba(220, 20, 60, 0.856);
                 font-weight: bold;
-                color:rgb(241, 232, 236);
+                color: rgb(241, 232, 236);
             }
-            
-            
-            #ContactId{
+
+
+            #ContactId {
                 position: relative;
-                top: 100px;
-                border:1px grey;
+                top: 50px;
+                border: 1px grey;
                 background-color: crimson;
                 color: rgb(241, 232, 236);
-                border-radius:10px;
-                height: 80px;
-                width:160px;
+                border-radius: 10px;
+                height: 50px;
+                width: 160px;
                 font-family: 'Courier New', Courier, monospace;
                 font-size: large;
-                cursor:pointer;
-                box-shadow:rgba(0, 0, 0, 0.315) 2px 2px;
+                cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.315) 2px 2px;
             }
-            #ContactId:hover{
-                width:170px;  
-                height: 90px;
+
+            #ContactId:hover {
+                width: 170px;
+                height: 55px;
+                box-shadow: 0 0 0;
             }
-            .footer{
-             position: relative;
-             top:100px;
-        }
-            
-            #Onyi{ position: relative;
+
+            .footer {
+                position: relative;
+                top: 100px;
+            }
+
+            #Onyi {
+                position: relative;
                 height: 400px;
-                width:400px;
+                width: 400px;
                 float: right;
-              }
-              .wave{
-                  animation-name: wave-animation;
-                  animation-duration: 2.5s;
-                  animation-iteration-count: infinite;
-                  transform-origin: 70% 70%;
-                  display: inline-block;
-              }
-              @keyframes wave-animation {
-                  0% {transform: rotate(0deg);}
-                  10% {transform: rotate(14deg);}
-                  20% {transform: rotate(-8deg);}
-                  30% {transform: rotate(14deg);}
-                  40% {transform: rotate(-4deg);}
-                  50% {transform: rotate(10deg);} 
-                  60% {transform: rotate(0deg);}
-                  100% {transform: rotate(0deg);}
-              }
+            }
+
+            .wave {
+                animation-name: wave-animation;
+                animation-duration: 2.5s;
+                animation-iteration-count: infinite;
+                transform-origin: 70% 70%;
+                display: inline-block;
+            }
+
+            @keyframes wave-animation {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                10% {
+                    transform: rotate(14deg);
+                }
+
+                20% {
+                    transform: rotate(-8deg);
+                }
+
+                30% {
+                    transform: rotate(14deg);
+                }
+
+                40% {
+                    transform: rotate(-4deg);
+                }
+
+                50% {
+                    transform: rotate(10deg);
+                }
+
+                60% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(0deg);
+                }
+            }
 
 
-              #Hello{
-                  animation-name: wave-animation2;
-                  animation-duration: 2.5s;
-                  animation-iteration-count: infinite;
-                  transform-origin: 70% 70%;
-                  display: inline-block;
-              }
-              @keyframes wave-animation2 {
-                  0% {transform: translate(0px);}
-                  10% {transform: translate(14px);}
-                  20% {transform: translate(-8px);}
-                  30% {transform: translate(14px);}
-                  40% {transform: translate(-4px);}
-                  50% {transform: translate(10px);} 
-                  60% {transform: translate(0px);}
-                  100% {transform: translate(0px);}
-              }
+            #Hello {
+                animation-name: wave-animation2;
+                animation-duration: 2.5s;
+                animation-iteration-count: infinite;
+                transform-origin: 70% 70%;
+                display: inline-block;
+            }
+
+            @keyframes wave-animation2 {
+                0% {
+                    transform: translate(0px);
+                }
+
+                10% {
+                    transform: translate(14px);
+                }
+
+                20% {
+                    transform: translate(-8px);
+                }
+
+                30% {
+                    transform: translate(14px);
+                }
+
+                40% {
+                    transform: translate(-4px);
+                }
+
+                50% {
+                    transform: translate(10px);
+                }
+
+                60% {
+                    transform: translate(0px);
+                }
+
+                100% {
+                    transform: translate(0px);
+                }
+            }
 
 
-              #P1{
-                  position: relative;
-                  left:14%;
-                  font-family: 'Courier New', Courier, monospace;
-                  font-weight: bold;
-                  font-size: large;
-                  color:rgb(20, 20, 20)
-              }
-
-              #AboutId{
+            #P1 {
                 font-family: 'Courier New', Courier, monospace;
-                  font-weight: bold;
-                  font-size: 45px; 
-                  position: relative;
-                  right: 14%;  
-                  top: 100px;
-              }
-             
-#List1{
-    text-align: center;
-    position: relative;
-    top:350px;
-    right: 200px;
-    width:1280px;
-    
-}
-#UL2{
-  float: right;  
-}
+                font-weight: bold;
+                font-size: large;
+                color: rgb(20, 20, 20)
+            }
 
-#UL3{
-  float: left;  
-  position: relative;
+            #AboutId {
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 45px;
+                position: relative;
+                text-align: center;
+                top: 0px;
+            }
 
-}
+            #List1 {
+                text-align: center;
+                position: relative;
+                top: 350px;
+                right: 200px;
+                width: 1280px;
 
-#heading{
-    text-decoration: 2px solid underline;
-    font-size: larger;
-}
+            }
 
-#AboutPos{
-    position: relative;
-    right:27%; 
-    top: 100px;  
-}
-}
+            #UL2 {
+                float: right;
+            }
+
+            #UL3 {
+                float: left;
+                position: relative;
+
+            }
+
+            #heading {
+                text-decoration: 2px solid underline;
+                font-size: larger;
+            }
+
+            #AboutPos {
+                position: relative;
+                right: 27%;
+                top: 100px;
+            }
+
+            h2 {
+                width: fit-content;
+                backdrop-filter: blur(0.1em);
+                border-radius: 5px;
+            }
+
+            p {
+                width: fit-content;
+                backdrop-filter: blur(0.1em);
+                border-radius: 5px;
+            }
+        }
 
 
 
-@media only screen and (max-width:800px) {
-            body{
+        @media only screen and (max-width:779px) {
+            body {
                 /*
                 background-color: rgb(241, 232, 236);
                 */
                 background: url("./images/onyeka webpage landscape.png") 0 0 no-repeat;
-                background-size: cover;
+                background-size: 100%;
                 overflow-x: hidden;
+                width: 90%;
             }
-            
-            
-               
-            ul{
+
+            #TopBar {
+                z-index: 1;
+                width: fit-content;
+                border-radius: 5px;
+                position: fixed;
+                top: 0;
+                background: url("./images/onyeka webpage landscape.png") 170px 0 repeat-x;
+            }
+
+
+
+            ul {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
                 background-color: rgb(241, 232, 236);
                 background: url("./images/onyeka webpage landscape.png") 170px 0 repeat-x;
-                width:100%;
+                width: 100%;
             }
-                li{
-                float:right;
+
+            li {
+                float: right;
             }
-            li a{
+
+            li a {
                 font-family: 'Courier New', Courier, monospace;
                 font-size: large;
                 display: block;
@@ -203,162 +295,265 @@
                 padding: 20px 10px;
                 text-decoration: none;
                 position: relative;
-                right:10px;
+                right: 10px;
             }
-            li a{
+
+            li a {
                 background-color: rgb(241, 232, 236);
             }
-            .active{
+
+            .active {
                 border-radius: 10px;
                 background-color: rgba(220, 20, 60, 0.856);
                 font-weight: bold;
-                color:rgb(241, 232, 236);
+                color: rgb(241, 232, 236);
             }
-            
-            
-            #ContactId{
+
+
+            #ContactId {
                 position: relative;
-                top: 100px;
-                border:1px grey;
+                top: 5px;
+                border: 1px grey;
                 background-color: crimson;
                 color: rgb(241, 232, 236);
-                border-radius:10px;
-                height: 80px;
-                width:160px;
+                border-radius: 10px;
+                height: 60px;
+                width: 160px;
                 font-family: 'Courier New', Courier, monospace;
                 font-size: large;
-                cursor:pointer;
-                box-shadow:rgba(0, 0, 0, 0.315) 2px 2px;
+                cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.486) 2px 2px;
             }
-            #ContactId:hover{
-                width:170px;  
-                height: 90px;
+
+            #ContactId:hover {
+                box-shadow: 0 0 0;
+                width: 170px;
+                height: 65px;
             }
-            .footer{
-             position: relative;
-             top:100px;
-        }
-            
-            #Onyi{ position: relative;
+
+            .footer {
+                position: relative;
+                top: 100px;
+            }
+
+            #Onyi {
+                position: relative;
                 height: 400px;
-                width:400px;
+                width: 400px;
                 float: right;
-              }
-              .wave{
-                  animation-name: wave-animation;
-                  animation-duration: 2.5s;
-                  animation-iteration-count: infinite;
-                  transform-origin: 70% 70%;
-                  display: inline-block;
-              }
-              @keyframes wave-animation {
-                  0% {transform: rotate(0deg);}
-                  10% {transform: rotate(14deg);}
-                  20% {transform: rotate(-8deg);}
-                  30% {transform: rotate(14deg);}
-                  40% {transform: rotate(-4deg);}
-                  50% {transform: rotate(10deg);} 
-                  60% {transform: rotate(0deg);}
-                  100% {transform: rotate(0deg);}
-              }
+            }
+
+            .wave {
+                animation-name: wave-animation;
+                animation-duration: 2.5s;
+                animation-iteration-count: infinite;
+                transform-origin: 70% 70%;
+                display: inline-block;
+            }
+
+            @keyframes wave-animation {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                10% {
+                    transform: rotate(14deg);
+                }
+
+                20% {
+                    transform: rotate(-8deg);
+                }
+
+                30% {
+                    transform: rotate(14deg);
+                }
+
+                40% {
+                    transform: rotate(-4deg);
+                }
+
+                50% {
+                    transform: rotate(10deg);
+                }
+
+                60% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(0deg);
+                }
+            }
 
 
-              #Hello{
-                  animation-name: wave-animation2;
-                  animation-duration: 2.5s;
-                  animation-iteration-count: infinite;
-                  transform-origin: 70% 70%;
-                  display: inline-block;
-              }
-              @keyframes wave-animation2 {
-                  0% {transform: translate(0px);}
-                  10% {transform: translate(14px);}
-                  20% {transform: translate(-8px);}
-                  30% {transform: translate(14px);}
-                  40% {transform: translate(-4px);}
-                  50% {transform: translate(10px);} 
-                  60% {transform: translate(0px);}
-                  100% {transform: translate(0px);}
-              }
+            #Hello {
+                width: fit-content;
+                backdrop-filter: blur(0.1em);
+                border-radius: 5px;
+                animation-name: wave-animation2;
+                animation-duration: 2.5s;
+                animation-iteration-count: infinite;
+                transform-origin: 70% 70%;
+                display: inline-block;
+            }
+
+            @keyframes wave-animation2 {
+                0% {
+                    transform: translate(0px);
+                }
+
+                10% {
+                    transform: translate(14px);
+                }
+
+                20% {
+                    transform: translate(-8px);
+                }
+
+                30% {
+                    transform: translate(14px);
+                }
+
+                40% {
+                    transform: translate(-4px);
+                }
+
+                50% {
+                    transform: translate(10px);
+                }
+
+                60% {
+                    transform: translate(0px);
+                }
+
+                100% {
+                    transform: translate(0px);
+                }
+            }
 
 
-              #P1{
-                  position: relative;
-                  left:77%;
-                  font-family: 'Courier New', Courier, monospace;
-                  font-weight: bold;
-                  font-size: large;
-                  color:rgb(20, 20, 20)
-              }
-
-              #AboutId{
+            #P1 {
+                position: relative;
+                /* left: 77%; */
                 font-family: 'Courier New', Courier, monospace;
-                  font-weight: bold;
-                  font-size: 45px; 
-                  position: relative;
-                  right: 25%;  
-                  top: 100px;
-                  text-decoration: underline;
-              }
-             
-#List1{
-    text-align: center;
-    position: relative;
-    top:350px;
-    right: 200px;
-    width:1280px;
-    background:rgb(241, 232, 236);
-}
-#UL2{
-  float: right;  
-}
+                font-weight: bold;
+                font-size: large;
+                color: rgb(20, 20, 20)
+            }
 
-#UL3{
-  float: left;  
-  position: relative;
+            #AboutId {
+                width: fit-content;
+                backdrop-filter: blur(0.1em);
+                border-radius: 5px;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 45px;
+                position: relative;
+                top: 0px;
+                text-decoration: underline;
+            }
 
-}
+            #List1 {
+                text-align: center;
+                position: relative;
+                top: 350px;
+                right: 200px;
+                width: 1280px;
+                background: rgb(241, 232, 236);
+            }
 
-#heading{
-    text-decoration: 2px solid underline;
-    font-size: larger;
-}
+            #UL2 {
+                float: right;
+            }
 
-#AboutPos{
-    position: relative;
-    right:77%; 
-    top: 100px;  
-}
-}
+            #UL3 {
+                float: left;
+                position: relative;
 
-        </style>
+            }
+
+            #heading {
+                text-decoration: 2px solid underline;
+                font-size: larger;
+            }
+
+            #AboutPos {
+                position: relative;
+                /* right: 77%; */
+                top: 100px;
+            }
+
+            h2 {
+                width: fit-content;
+                backdrop-filter: blur(0.1em);
+                border-radius: 5px;
+            }
+
+            p {
+                width: fit-content;
+                backdrop-filter: blur(0.1em);
+                border-radius: 5px;
+            }
+        }
+
+        @media only screen and (max-width:500px) {
+            body{
+                background: url("./images/onyeka webpage landscape.png") 0 50px no-repeat;
+                background-size: 100%;
+                overflow-x: hidden;
+                width: 90%;
+            }
+
+            #AboutPos {
+                top: 200px;
+            }
+
+            #TopBar {
+                transition-property: all;
+                transition-duration: 1s;
+                top: -30%;
+                width: 100%;
+            }
+
+            #TopBar:hover {
+                transition-property: all;
+                transition-duration: 1s;
+                top: 0%;
+            }
+
+            li {
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
         <ul id="TopBar">
-         <li><a href="LoginPage.html">Login</a></li>
-         <li><a href="RegistrationPage.html">Register</a></li>
-         <li><a href="ContactPage.html">Contact Me</a></li>
-         <li><a href="index.html" class="active">About Me</a></li>
+            <li><a id="NotActive" href="LoginPage.html">Login</a></li>
+            <li><a id="NotActive" href="RegistrationPage.html">Register</a></li>
+            <li><a id="NotActive" href="ContactPage.html">Contact Me</a></li>
+            <li><a class="active">About Me</a></li>
         </ul>
-    </head>
-    <body>
-        <header>
-            <center><h1 id="AboutId">ABOUT ME</h1></center>
-            
-        </header>
-        <main>
-           <!----- <img id="Onyi" src="onyeka webpage landscape.png">--->
+    </header>
+    <main>
+        <!----- <img id="Onyi" src="onyeka webpage landscape.png">--->
+        <center>
             <div id="P1">
                 <div id="AboutPos">
-                <center><h1><span id="Hello"> Hello there!</span> <span class="wave">👋</span></h1>
-        <h2 style="color: dimgrey;">I'm <font color=crimson>Onyeka</font> Onwubalili</h2>   
-         <p style="color: dimgrey;">I am an undergraduate student at the University of Nigeria, Nsukka.<br>I'm devoted to learning new things and improving myself in ways I can.<br/>I am currently a Front-end developer intern at Zuri Training.</p></center>
-         </div>
-         
-            </div>
-          </div>
-        </main>
-        <footer class="footer">
-                        
-            <center><a href="ContactPage.html"><button id="ContactId">Contact Me</button></a></center>
-        </footer>
-    </body>
+                    <h1 id="AboutId">ABOUT ME</h1>
+                    <h1><span id="Hello"> Hello there!</span> <span class="wave">👋</span></h1>
+                    <h2 style="color: rgb(48, 48, 48);">I'm <font color=crimson>Onyeka</font> Onwubalili</h2>
+                    <p style="color: rgb(48, 48, 48);">I am an undergraduate student at the University of Nigeria,
+                        Nsukka.<br>I'm devoted to learning new things and improving myself in ways I can.<br />I am
+                        currently a Front-end developer intern at Zuri Training.</p>
+                    <a href="ContactPage.html"><button id="ContactId">Contact Me</button></a>
+                </div>
+        </center>
+        </div>
+        </div>
+    </main>
+</body>
+
 </html>
